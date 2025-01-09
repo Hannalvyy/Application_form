@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Job application form</title>
+  <link rel="icon" href="images/icon_1.png">
+  <link rel="stylesheet" href="project.css">
+  <meta charset="UTF-8">
+  <meta name="keywords" content="application,apply,job">
+</head>
+<body>
+  <form action="/server.py" method="get">
+  <header id="header">
+  <h1>Job Application</h1>
+  <h3>Please complete the form below to apply for a position with us.</h3> 
+  </header>
+  <section id="section">
+    <h4>1.Full name</h4>
+    <label for="Name">First name</label>
+    <input type="text" name="ism" id="Name" required>
+    <label for="last_name">Last name</label>
+    <input type="text" name="Familiya" id="last_name" required>
+    <h4>2.Body Size</h4>
+    <label for="height">Height</label>
+    <input type="number" step="01" min="0" placeholder="cm" id="height" name="Bo'y" required>
+    <label for="weight">Weight</label>
+    <input type="number" placeholder="kg" min="0" required>
+    <h4>3.Birth Date</h4>
+    <label for="birthmonth">Month and Year</label>
+    <input type="month"  id="birthmonth" placeholder="Please select a month and year" name="oy" required>
+    <label for="day">Birtday</label>
+    <input type="number" id="day" name="kun" min="1" max="31" placeholder="please select a day" style="width: 10em;" required>
+    <h4>4.Family Status</h4>
+    <input type="radio" name="oilaviyholati" id="divorced" >
+    <label for="divorced">Divorced</label> <br>
+    <input type="radio" name="oilaviyholati" id="married">
+    <label for="married">Married</label><br>
+    <input type="radio" name="oilaviyholati" id="single">
+    <label for="single">Single</label><br>
+    <input type="radio" name="oilaviyholati" id="other">
+    <label for="other">Other</label>
+    <h4>5.Current Address</h4>
+    <label for="street">Street Address</label>
+    <input type="text" id="street" name="ko'cha" required> <br>
+    <label for="street2" >Street Address Line 2</label>
+    <input type="text" id="street2" name="ko'cha2" > <br>
+    <label for="city" >City</label>
+    <input type="text" id="city" name="shahar" required><br>
+    <label for="zipcode">Zip/postal code</label>
+    <input type="text" id="zipcode" name="zipkod">
+    <h4>6.Email Address </h4>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="emayl" required>
+    <h4>7.Phone Number</h4>
+    <label for="areacode">Area code</label>
+    <input type="text" id="areacode" placeholder="90" min="1" style="width: 30px;" required>
+    <label for="phonenumber">Phone number</label>
+    <input type="text" id="phonenumber" placeholder="9000909" required>
+    <h4>8.LinkedIn</h4>
+    <label for="linkedIn">LinkedIn</label>
+    <input type="text" required>
+    <h4>9.Experience</h4>
+    <label for="experience" >Experience</label>
+    <input type="number" min="0" required>
+    <h4>10.Position Applied</h4>
+     <select name="position" id="position" >
+      <option  value="0">please select</option>
+       <option value="">Sales manager</option>
+       <option value="">Marketing specialist</option>
+       <option value="">Product lead</option>
+       <option value="">Developer</option>
+     </select>
+     <h4>11.How did you hear about us</h4>
+     <select name="howknow" id="howknow">
+     <option value="0">How did you hear about us</option>
+     <option value="">LinkedIn</option>
+     <option value="">Event</option>
+     <option value="">Company Website</option>
+     <option value="">Social media</option>
+     <option value="">Family/Friend</option>
+     </select>
+     <h4>12.Available Start Date</h4>
+      <label for="startdate" >Start Date</label>
+      <input type="date" required>
+     <h4>13.Computer skills</h4>
+      <table>
+        <thead>
+          <tr>
+          <th style="width:80px ;"></th>
+          <th> Beginner</th>
+          <th>Elementary</th>
+          <th>Advanced</th>
+          <th>Expert</th>
+          </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>Excel</td>
+          <td><input type="radio" name="excel"></td>
+          <td><input type="radio" name="excel"></td>
+          <td><input type="radio" name="excel"></td>
+          <td><input type="radio" name="excel"></td>
+         </tr>
+         <tr>
+          <td>Word</td>
+          <td><input type="radio" name="word"></td>
+          <td><input type="radio" name="word"></td>
+          <td><input type="radio" name="word"></td>
+          <td><input type="radio" name="word"></td>
+         </tr>
+         <tr>
+          <td>1C</td>
+          <td><input type="radio" name="1c"></td>
+          <td><input type="radio" name="1c"></td>
+          <td><input type="radio" name="1c"></td>
+          <td><input type="radio" name="1C"></td>
+         </tr>
+         <tr>
+          <td>Programming Language</td>
+          <td><input type="radio" name="Programming"></td>
+          <td><input type="radio" name="Programming"></td>
+          <td><input type="radio" name="Programming"></td>
+          <td><input type="radio" name="Programming"></td>
+         </tr>
+        </tbody>
+      </table>
+      <h4>14.Ability knowing English Language</h4>
+      <label for="worst">Worst</label>
+      <input type="radio" name="worst" id="worst">
+      <input type="radio" name="worst" id="worst">
+      <input type="radio" name="worst" id="worst">
+      <input type="radio" name="worst" id="worst">
+      <input type="radio" name="worst" id="worst">
+      <label for="worst">Best</label>
+      <h4>15.Applicant Document(Diploma, Certificate)</h4>
+        <input type="file" id="document" name="document" required>
+      <h4>16.Upload Your Resume</h4>
+        <input type="file" name="resume" required>
+      <h4>17.Cover Letter</h4>
+        <textarea name="coverletter" id="text" cols="80" rows="20" required></textarea>
+      <button type="submit" id="apply">Apply</button>
+  </section>
+  </form>
+</body>
+</html>
